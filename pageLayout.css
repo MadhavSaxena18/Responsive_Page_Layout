@@ -1,0 +1,106 @@
+ * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+        }
+
+        .nav-menu a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        main {
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        main h2 {
+            margin-top: 0;
+        }
+
+        aside {
+            background-color: #e4e4e4;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+       
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                background-color: #444;
+                margin-top: 10px;
+                padding: 10px 0;
+            }
+
+            .nav-menu a {
+                padding: 10px;
+            }
+        }
